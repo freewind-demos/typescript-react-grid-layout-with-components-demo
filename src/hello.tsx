@@ -4,6 +4,7 @@ import GridLayout, {Layout} from 'react-grid-layout';
 
 import 'react-grid-layout/css/styles.css';
 import './index.css';
+import Item from "./item";
 
 class Hello extends React.Component {
   render() {
@@ -15,9 +16,9 @@ class Hello extends React.Component {
     return <div>
       <h1>Hello React</h1>
       <GridLayout className='layout' layout={layout} cols={12} rowHeight={30} width={1200}>
-        <div key='a'>A</div>
-        <div key='b'>B</div>
-        <div key='c'>C</div>
+        <div key='a'><Item value='A'/></div>
+        <div key='b'><Item value='B'/></div>
+        <div key='c'><Item value='C'/></div>
       </GridLayout>
     </div>
   }
